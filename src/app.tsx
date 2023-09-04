@@ -1,9 +1,10 @@
 import React from "react";
+import { Button } from "@mui/material";
 
 function App() {
   return (
     <div>
-      <div>Hello React.</div>
+      <Button variant="contained">Hello React.</Button>
     </div>
   );
 }
