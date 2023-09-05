@@ -11,11 +11,17 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     port: 3000,
+    hot: true,
+    compress: true,
   },
   mode: "development",
   module: {
     rules: [
-      { test: /\.css$/i, use: ["style-loader", "css-loader"] },
+      {
+        test: /\.css$/i,
+        include: path.resolve(__dirname, "src"),
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
       { test: /\.(ts|tsx)$/, use: "ts-loader", exclude: /node_modules/ },
     ],
   },
