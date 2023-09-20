@@ -1,6 +1,10 @@
-import Button from "@mui/material/Button";
 import React from "react";
+import SignIn from "../components/SignIn";
 
 export default function Home() {
-  return <Button variant="contained">Hello Next.</Button>;
+  return (
+    <>
+      <SignIn />
+    </>
+  );
 }
